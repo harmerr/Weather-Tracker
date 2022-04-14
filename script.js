@@ -2,7 +2,7 @@ let searchBtn = document.getElementById('show-weather').addEventListener('click'
 
 async function search() {
     let zip = document.getElementById('zipcode').value
-    var weather = fetch("https://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=ce33798b72d6ea63a1e95262de135293")
+    var weather = fetch("https://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=ce33798b72d6ea63a1e95262de135293&units=imperial")
     .then(response => response.json()).then(data => {
         console.log(data)
         document.getElementById('city-name').innerHTML = data.name
